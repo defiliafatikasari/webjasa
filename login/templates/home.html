@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Home-DF SERVICES</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
+      <nav class="navbar">
+        <a href="\home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#jasa">Jasa yang Tersedia</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#review">Review</a>
+        <a href="\blogs">Blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+      </div>
+
+      <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Cari....." />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      <div class="shopping-cart">
+        <div class="box">
+          <i class="fas fa-trash"></i>
+          <img src="images/printer.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>Printer Canon ip2770</h3>
+            <span class="price">Rp</span>
+            <span class="quantity">qty : 1</span>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-trash"></i>
+          <img src="images/kertas.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>Kertas F4 dan A4</h3>
+            <span class="price">Rp</span>
+            <span class="quantity">qty : 1</span>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-trash"></i>
+          <img src="images/tinta.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>Tinta</h3>
+            <span class="price">Rp</span>
+            <span class="quantity">qty : 1</span>
+          </div>
+        </div>
+        <div class="total">total : Rp</div>
+        <a href="#" class="btn">Checkout</a>
+      </div>
+
+      <!-- Login -->
+      <form action="" class="login-form">
+        <h3>Login Sekarang</h3>
+        <input type="email" placeholder="Masukkan E-mail" class="box" />
+        <input type="password" placeholder="Masukkan Password" class="box" />
+        <p>Lupa Password! <a href="#"> Click Here</a></p>
+        <p>Masih Belum Punya Akun! <a href="\register"> Daftar Sekarang</a></p>
+        <input type="submit" value="login now" class="btn" />
+      </form>
+    </header>
+    <!-- End Header -->
+
+    <!-- Home -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>SELAMAT DATANG <span>DI JASA</span> ONLINE DAN OFFLINE</h3>
+        <p>DF SERVICES - Jasa Untuk Mempermudah Pekerjaan Anda</p>
+        <a href="#" class="btn">Order Sekarang</a>
+      </div>
+    </section>
+    <!-- End Home -->
+
+    <!-- Tentang Kami / About -->
+    <section class="about" id="about">
+      <h1 class="heading">Tentang <span>Kami</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="static/images/printer.jpg" alt="" width="100px" />
+          <h3>Printer Canon ip2770</h3>
+          <p>Menggunakan Jenis Printer Canon, dengan Kualitas Pencetakan yang bagus...</p>
+          <a href="#" class="btn">Baca Selengkapnya</a>
+        </div>
+
+        <div class="box">
+          <img src="static/images/kertas.jpg" alt="" width="100px" />
+          <h3>Kertas F4 dan A4</h3>
+          <p>Menggunakan Kertas dengan Ukuran F4(Folio) dan A4 70gsm/80gsm...</p>
+          <a href="#" class="btn">Baca Selengkapnya</a>
+        </div>
+
+        <div class="box">
+          <img src="static/images/tinta.jpg" alt="" width="100px" />
+          <h3>Tinta</h3>
+          <p>Menggunakan Merek Tinta terbagus, dengan warna-warna printer: warna hitam, merah, biru dan kuning...</p>
+          <a href="#" class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Tentang Kami / About -->
+    <!-- JavaScript -->
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
