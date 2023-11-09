@@ -1,12 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogs-DF SERVICES</title>
-  </head>
-  <body>
-    <a href="/home">Kembali</a>
-    <h1>SELAMAT DATANG DI MENU BLOGS - DF SERVICES</h1>
-  </body>
-</html>
+{% extends 'base.html' %} {% load static %} {% block menu %}
+<!-- Header -->
+<header class="header">
+  <a href="\login" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
+  <nav class="navbar">
+    <a href="\home">Home</a>
+    <a href="\blogs">Blogs</a>
+  </nav>
+
+  <div class="icons">
+    <div class="fas fa-bars" id="menu-btn"></div>
+    <div class="fas fa-search" id="search-btn"></div>
+    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    <div class="fas fa-user" id="login-btn"></div>
+  </div>
+
+  <form action="" class="search-form">
+    <input type="search" id="search-box" placeholder="Cari....." />
+    <label for="search-box" class="fas fa-search"></label>
+  </form>
+
+  <div class="shopping-cart">
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="{% static 'image/printer.jpg' %}" alt="" width="100px" />
+      <div class="content">
+        <h3>Printer Canon ip2770</h3>
+        <span class="price">Rp</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="{% static 'image/kertas.jpg' %}" alt="" width="100px" />
+      <div class="content">
+        <h3>Kertas F4 dan A4</h3>
+        <span class="price">Rp</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="{% static 'image/tinta.jpg' %}" alt="" width="100px" />
+      <div class="content">
+        <h3>Tinta</h3>
+        <span class="price">Rp</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+    <div class="total">total : Rp</div>
+    <a href="#" class="btn">Checkout</a>
+  </div>
+
+  <!-- Login -->
+  <form action="" class="login-form">
+    <h3>Login Sekarang</h3>
+    <input type="email" placeholder="Masukkan E-mail" class="box" />
+    <input type="password" placeholder="Masukkan Password" class="box" />
+    <p>Lupa Password! <a href="#"> Click Here</a></p>
+    <p>Masih Belum Punya Akun! <a href="\register"> Daftar Sekarang</a></p>
+    <input type="submit" value="login now" class="btn" />
+  </form>
+</header>
+<!-- End Header -->
+{% endblock menu %} {% block content %}
+<style>
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("{% static 'image/bgbanner1.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+  }
+</style>
+
+<section class="home" id="home">
+  <div class="content">
+    <h3>SELAMAT DATANG <span>DI BLOGS</span> DF SERVICES</h3>
+    <p>DF SERVICES - DF adalah Singkatan Nama Owner Jasa kami Defilia Fatikasari</p>
+    <p>DF Services berdiri pada tahun 2022 - Sekarang</p>
+    <a href="#" class="btn">Baca Selengkapnya Tentang DF Services</a>
+  </div>
+</section>
+
+<!-- Blogs -->
+<section class="blogs" id="blogs">
+  <h1 class="heading">Blogs <span>DF Services</span></h1>
+
+  <div class="box-container">
+    <div class="box">
+      <img src="{% static 'image/logodf.png' %}" alt="" />
+      <div class="content">
+        <div class="icons">
+          <a href="#"><i class="fas fa-user"></i> by Pengguna </a>
+          <a href="#"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
+        </div>
+        <h3>DF Services</h3>
+        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain</p>
+        <a href="#" class="btn">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logodf.png' %}" alt="" />
+      <div class="content">
+        <div class="icons">
+          <a href="#"><i class="fas fa-user"></i> by Pengguna </a>
+          <a href="#"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
+        </div>
+        <h3>DF Services</h3>
+        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain</p>
+        <a href="#" class="btn">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logodf.png' %}" alt="" />
+      <div class="content">
+        <div class="icons">
+          <a href="#"><i class="fas fa-user"></i> by Pengguna </a>
+          <a href="#"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
+        </div>
+        <h3>DF Services</h3>
+        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain</p>
+        <a href="#" class="btn">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Blogs -->
+
+<!-- Footer -->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>DF Services <i class="fas fa-shopping-basket"></i></h3>
+      <p>DF Services - Membantu Pekerjaan Anda</p>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>Info Kontak</h3>
+      <a href="#" class="links"><i class="fas fa-phone"></i>+6282-19756-9330</a>
+      <a href="#" class="links"><i class="fas fa-phone"></i>+6287-81789-9367</a>
+      <a href="#" class="links"><i class="fas fa-envelope"></i>defiliafatikasari09@gmail.com</a>
+      <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>Indonesia, Jawa Timur</a>
+    </div>
+
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Tentang Kami</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Jasa Yang Tersedia</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Kontak</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Review</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
+    </div>
+
+    <div class="box">
+      <h3>newsletter</h3>
+      <p>subscribe for latest updates</p>
+      <input type="email" placeholder="email kamu" class="email" />
+      <input type="submit" value="subscribe" class="btn" /><br />
+      <img src="{% static 'image/cash.jpg' %}" class="payment-img" alt="" width="100px" />
+      <img src="{% static 'image/bank.jpg' %}" class="payment-img" alt="" width="100px" />
+    </div>
+  </div>
+  <div class="credit">Created by <span>Defilia Fatikasari 2023 </span> | all rights reserved</div>
+</section>
+<!-- End Footer -->
+{% endblock content %}

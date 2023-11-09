@@ -1,123 +1,405 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <title>Home-DF SERVICES</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
-      <nav class="navbar">
-        <a href="\home">Home</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#jasa">Jasa yang Tersedia</a>
-        <a href="#kontak">Kontak</a>
-        <a href="#review">Review</a>
-        <a href="\blogs">Blogs</a>
-      </nav>
+{% extends 'base.html' %} {% load static %} {% block menu %}
+<!-- Header -->
+<header class="header">
+  <a href="\login" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
+  <nav class="navbar">
+    <a href="\home">Home</a>
+    <a href="#about">Tentang Kami</a>
+    <a href="#jasa">Jasa yang Tersedia</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#review">Review</a>
+    <a href="\blogs">Blogs</a>
+  </nav>
 
-      <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-shopping-cart" id="cart-btn"></div>
-        <div class="fas fa-user" id="login-btn"></div>
-      </div>
+  <div class="icons">
+    <div class="fas fa-bars" id="menu-btn"></div>
+    <div class="fas fa-search" id="search-btn"></div>
+    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    <div class="fas fa-user" id="login-btn"></div>
+  </div>
 
-      <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="Cari....." />
-        <label for="search-box" class="fas fa-search"></label>
-      </form>
+  <form action="" class="search-form">
+    <input type="search" id="search-box" placeholder="Cari....." />
+    <label for="search-box" class="fas fa-search"></label>
+  </form>
 
-      <div class="shopping-cart">
-        <div class="box">
-          <i class="fas fa-trash"></i>
-          <img src="images/printer.jpg" alt="" width="100px" />
-          <div class="content">
-            <h3>Printer Canon ip2770</h3>
-            <span class="price">Rp</span>
-            <span class="quantity">qty : 1</span>
-          </div>
-        </div>
-        <div class="box">
-          <i class="fas fa-trash"></i>
-          <img src="images/kertas.jpg" alt="" width="100px" />
-          <div class="content">
-            <h3>Kertas F4 dan A4</h3>
-            <span class="price">Rp</span>
-            <span class="quantity">qty : 1</span>
-          </div>
-        </div>
-        <div class="box">
-          <i class="fas fa-trash"></i>
-          <img src="images/tinta.jpg" alt="" width="100px" />
-          <div class="content">
-            <h3>Tinta</h3>
-            <span class="price">Rp</span>
-            <span class="quantity">qty : 1</span>
-          </div>
-        </div>
-        <div class="total">total : Rp</div>
-        <a href="#" class="btn">Checkout</a>
-      </div>
-
-      <!-- Login -->
-      <form action="" class="login-form">
-        <h3>Login Sekarang</h3>
-        <input type="email" placeholder="Masukkan E-mail" class="box" />
-        <input type="password" placeholder="Masukkan Password" class="box" />
-        <p>Lupa Password! <a href="#"> Click Here</a></p>
-        <p>Masih Belum Punya Akun! <a href="\register"> Daftar Sekarang</a></p>
-        <input type="submit" value="login now" class="btn" />
-      </form>
-    </header>
-    <!-- End Header -->
-
-    <!-- Home -->
-    <section class="home" id="home">
+  <div class="shopping-cart">
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="{% static 'image/jmakalah.png' %}" alt="" width="100px" />
       <div class="content">
-        <h3>SELAMAT DATANG <span>DI JASA</span> ONLINE DAN OFFLINE</h3>
-        <p>DF SERVICES - Jasa Untuk Mempermudah Pekerjaan Anda</p>
-        <a href="#" class="btn">Order Sekarang</a>
+        <h3>Jasa Pembuatan Makalah</h3>
+        <span class="price">DP-Rp15000</span>
+        <span class="quantity">qty : 1 </span>
       </div>
-    </section>
-    <!-- End Home -->
+    </div>
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="{% static 'image/jketik.png' %}" alt="" width="100px" />
+      <div class="content">
+        <h3>Jasa Ketik</h3>
+        <span class="price">DP-Rp10000</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="{% static 'image/jprinthp.png' %}" alt="" width="100px" />
+      <div class="content">
+        <h3>Jasa Print Hitam Putih</h3>
+        <span class="price">Rp20000</span>
+        <span class="quantity">qty : 10 Lembar</span>
+      </div>
+    </div>
+    <div class="total">total : Rp45000</div>
+    <a href="#" class="btn">Checkout</a>
+  </div>
 
-    <!-- Tentang Kami / About -->
-    <section class="about" id="about">
-      <h1 class="heading">Tentang <span>Kami</span></h1>
+  <!-- Login -->
+  <form action="" class="login-form">
+    <h3>Login Sekarang</h3>
+    <input type="email" placeholder="Masukkan E-mail" class="box" />
+    <input type="password" placeholder="Masukkan Password" class="box" />
+    <p>Lupa Password! <a href="#"> Click Here</a></p>
+    <p>Masih Belum Punya Akun! <a href="\register"> Daftar Sekarang</a></p>
+    <input type="submit" value="login now" class="btn" />
+  </form>
+</header>
+<!-- End Header -->
+{% endblock menu %} {% block content %}
+<style>
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("{% static 'image/bgbanner.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+  }
+</style>
+<!-- Home -->
+<section class="home" id="home">
+  <div class="content">
+    <h3>SELAMAT DATANG <span>DI JASA</span> ONLINE DAN OFFLINE</h3>
+    <p>DF SERVICES - Jasa Untuk Mempermudah Pekerjaan Anda</p>
+    <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager</p>
+    <a href="#jasa" class="btn">Order Sekarang</a>
+  </div>
+</section>
+<!-- End Home -->
 
-      <div class="box-container">
-        <div class="box">
-          <img src="static/images/printer.jpg" alt="" width="100px" />
-          <h3>Printer Canon ip2770</h3>
-          <p>Menggunakan Jenis Printer Canon, dengan Kualitas Pencetakan yang bagus...</p>
-          <a href="#" class="btn">Baca Selengkapnya</a>
+<!-- Tentang Kami / About -->
+<section class="about" id="about">
+  <h1 class="heading">Tentang <span>Kami</span></h1>
+
+  <div class="box-container">
+    <div class="box">
+      <img src="{% static 'image/logodf.png' %}" alt="" width="100px" />
+      <h3>DF-SERVICES</h3>
+      <p>Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain....</p>
+      <a href="#" class="btn">Baca Selengkapnya</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/printer.jpg' %}" alt="" width="100px" />
+      <h3>Printer Canon ip2770</h3>
+      <p>Menggunakan Jenis Printer Canon ip2770, dengan Kualitas Pencetakan yang terbaik dan bagus...</p>
+      <a href="#" class="btn">Baca Selengkapnya</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/kertas.jpg' %}" alt="" width="100px" />
+      <img src="{% static 'image/tinta.jpg' %}" alt="" width="100px" />
+      <h3>Kertas F4/A4 Dan Tinta</h3>
+      <p>Menggunakan Kertas dengan Ukuran F4(Folio) dan A4 70gsm, serta Menggunakan Merek Tinta terbagus...</p>
+      <a href="#" class="btn">Baca Selengkapnya</a>
+    </div>
+  </div>
+</section>
+<!-- End Tentang Kami / About -->
+
+<!-- Jasa yang Tersedia -->
+<section class="jasa" id="jasa">
+  <h1 class="heading">Jasa - <span>DF Services</span></h1>
+
+  <div class="swiper product-kami">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jprinthp.png' %}" alt="" />
+        <h3>Jasa Print Online Offline - Hitam Putih</h3>
+        <div class="harga">Rp500</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
         </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
 
-        <div class="box">
-          <img src="static/images/kertas.jpg" alt="" width="100px" />
-          <h3>Kertas F4 dan A4</h3>
-          <p>Menggunakan Kertas dengan Ukuran F4(Folio) dan A4 70gsm/80gsm...</p>
-          <a href="#" class="btn">Baca Selengkapnya</a>
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jprintw.png' %}" alt="" />
+        <h3>Jasa Print Online Offline - Warna</h3>
+        <div class="harga">Rp1000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
         </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
 
-        <div class="box">
-          <img src="static/images/tinta.jpg" alt="" width="100px" />
-          <h3>Tinta</h3>
-          <p>Menggunakan Merek Tinta terbagus, dengan warna-warna printer: warna hitam, merah, biru dan kuning...</p>
-          <a href="#" class="btn">Baca Selengkapnya</a>
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jprintg.png' %}" alt="" />
+        <h3>Jasa Print Online Offline - Gambar</h3>
+        <div class="harga">Rp1500</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jprintbb.png' %}" alt="" />
+        <h3>Jasa Print Online Offline - Bolak Balik</h3>
+        <div class="harga">Rp2000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper product-kami">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jketik.png' %}" alt="" />
+        <h3>Jasa Ketik</h3>
+        <div class="harga">Start from : Rp3000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jmakalah.png' %}" alt="" />
+        <h3>Jasa Pembuatan Makalah SD/SMP/SMA/Mahasiswa</h3>
+        <div class="harga">Start from : Rp25000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jppt.png' %}" alt="" />
+        <h3>Jasa Pembuatan PPT SD/SMP/SMA/Mahasiswa</h3>
+        <div class="harga">Start from : Rp30000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jeditdesain.png' %}" alt="" />
+        <h3>Jasa Desain/Editing</h3>
+        <div class="harga">Start from : Rp5000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Jasa yang Tersedia -->
+
+<!-- Kontak -->
+<section class="kontak" id="kontak">
+  <h1 class="heading">Kontak <span>DF Services</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="{% static 'image/logowa.png' %}" alt="" />
+      <h3>082197569330</h3>
+      <p>Hubungi Kontak WA di atas</p>
+      <a href="#" class="btn">Klik Link Ini</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logoemail.png' %}" alt="" />
+      <h3>defitikalisajk@gmail.com</h3>
+      <p>Pengiriman File</p>
+      <a href="#" class="btn">Klik Link Ini</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logoig.png' %}" alt="" />
+      <h3>@dfser.vices/@im_dftikasr</h3>
+      <p>Informasi Lengkap</p>
+      <a href="#" class="btn">Klik Link Ini</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logofb.png' %}" alt="" />
+      <h3>Defilia Fatikasari</h3>
+      <p>Kontak Facebook</p>
+      <a href="#" class="btn">Klik Link Ini</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logoyt.png' %}" alt="" />
+      <h3>Defilia Fatikasari</h3>
+      <p>YouTube</p>
+      <a href="#" class="btn">Klik Link Ini</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/logolokasi.png' %}" alt="" />
+      <h3>Lokasi Jasa DF Services</h3>
+      <p>Jalan Jalmak Tengah, RT.002/RW.005, Gang 7 Pamekasan, Jawa Timur</p>
+      <a href="#" class="btn">Klik Link Ini</a>
+    </div>
+  </div>
+</section>
+<!-- End Kontak -->
+
+<!-- Review -->
+<section class="review" id="review">
+  <h1 class="heading">Customer's <span>Review</span></h1>
+
+  <div class="swiper review-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{% static 'image/logodf.png' %}" alt="" />
+        <p>Kualitas Pencetakannya bagus dan Jasa yang disedakan cukup lengkap untuk membantu pekerjaan para siswa maupun mahasiswa</p>
+        <h3>Anik Kusmawati</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
         </div>
       </div>
-    </section>
-    <!-- End Tentang Kami / About -->
-    <!-- JavaScript -->
-    <script src="{% static 'script.js' %}"></script>
-  </body>
-</html>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/logodf.png' %}" alt="" />
+        <p>Jasa Online yang pertama kali saya jumpai dengan pelayanan dan kualitas yang sangat bagus</p>
+        <h3>Putri Ningsih</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/logodf.png' %}" alt="" />
+        <p>Tidak usah diragukan lagi, jasa online yang bagus dan hasilnya terjamin 100 %</p>
+        <h3>Riska Wahyuni JS</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/logodf.png' %}" alt="" />
+        <p>Jasa buat makalah yang super duper keren dan bagus</p>
+        <h3>Yoga Septian DP</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Review -->
+
+<!-- Footer -->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>DF Services <i class="fas fa-shopping-basket"></i></h3>
+      <p>DF Services - Membantu Pekerjaan Anda</p>
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>Info Kontak</h3>
+      <a href="#" class="links"><i class="fas fa-phone"></i>+6282-19756-9330</a>
+      <a href="#" class="links"><i class="fas fa-phone"></i>+6287-81789-9367</a>
+      <a href="#" class="links"><i class="fas fa-envelope"></i>defiliafatikasari09@gmail.com</a>
+      <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>Indonesia, Jawa Timur</a>
+    </div>
+
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Tentang Kami</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Jasa Yang Tersedia</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Kontak</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Review</a>
+      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
+    </div>
+
+    <div class="box">
+      <h3>newsletter</h3>
+      <p>subscribe for latest updates</p>
+      <input type="email" placeholder="email kamu" class="email" />
+      <input type="submit" value="subscribe" class="btn" /><br />
+      <img src="{% static 'image/cash.jpg' %}" class="payment-img" alt="" width="100px" />
+      <img src="{% static 'image/bank.jpg' %}" class="payment-img" alt="" width="100px" />
+    </div>
+  </div>
+  <div class="credit">Created by <span>Defilia Fatikasari 2023 </span> | all rights reserved</div>
+</section>
+<!-- End Footer -->
+{% endblock content %}
