@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+
+    <!-- My CSS -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'image/defilia.png' %}" />
+    <title>My Portofolio | Defilia Fatikasari</title>
+  </head>
+  <body id="home">
+    <style>
+      .jumbotron {
+        padding-top: 6rem;
+        background-color: #e2edff;
+      }
+
+      #projects {
+        background-color: #e2edff;
+      }
+
+      section {
+        padding-top: 5rem;
+      }
+    </style>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+      <!-- style="background-color: #000000"> -->
+      <div class="container">
+        <a class="navbar-brand" href="#defilia">Defilia Fatikasari</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="\blogs">Back</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Akhir Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="{% static 'image/foto.jpg' %}" alt="Defilia Fatikasari" width="150" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4">Defilia Fatikasari</h1>
+      <a href="https://www.linkedin.com/in/defilia-fatikasari/" target="_blank">Linkedin | </a>
+      <a href="https://instagram.com/im_dftikasr18?igshid=MzMyNGUyNmU2YQ==" target="_blank">Instagram | </a>
+      <a href="https://www.facebook.com/defilia.fatikasari.77?mibextid=ZbWKwL" target="_blank">Facebook | </a>
+      <a href="https://twitter.com/kookiyy3?t=Qd8vS0fOXOA8AJTiQf7E_Q&s=09" target="_blank">Twitter | </a>
+      <a href="https://www.tiktok.com/@defiliafatikasari?_t=8i0I4o7c4av&_r=1" target="_blank">TikTok | </a>
+      <a href="https://youtube.com/@DefiliaFatikasariTI?si=uo36vhZJbYRNP0iP" target="_blank">YouTube</a>
+      <p class="lead">Programmer | Businessman | Office Workers</p>
+      <p>Jalan Jalmak Gang.VII Pamekasan, Jawa Timur | (+62) 82197569330 | (+62) 87862771867 | defiliafatikasari09@gmail.com</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L40,106.7C80,117,160,139,240,133.3C320,128,400,96,480,106.7C560,117,640,171,720,202.7C800,235,880,245,960,213.3C1040,181,1120,107,1200,74.7C1280,43,1360,53,1400,58.7L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Jumbotron -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>About Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4">
+            <p>
+              Halo, Saya Defilia Fatikasari, Biasa dipanggil Tika atau Defi. Saya seorang siswa lulusan SMKN3 Pamekasan Jurusan Rekayasa Perangkat Lunak, dan Mahasiswa lulusan Universitas Islam Madura Jurusan Teknik Informatika. Saya
+              memiliki Bakat dan Minat di Bidang IT (Information Technology).
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              Kemampuan -> Hard Skills: Mampu Mengoperasikan Komputer dengan Baik, Mampu Mengoperasikan Microsoft Office, Google Apps, Visual Studio Code, Menguasai Dasar Copywriting, Front-end Programming, Back-end Programming, Editing
+              Foto atau Video, Konten Kreator serta Suka dalam Berbisnis (Menguasai Strategi Dasar Digital Marketing dalam Bisnis).
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>Kemampuan -> Soft Skills: Manajemen Waktu, Disiplin. Kerja Sama Tim, Analitis, Negosiasi, Kepemimpinan, Detail dalam Bekerja, Komunikatif, Pendengar Aktif dan Target Oriented.</p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,128L48,154.7C96,181,192,235,288,218.7C384,203,480,117,576,96C672,75,768,117,864,117.3C960,117,1056,75,1152,48C1248,21,1344,11,1392,5.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>My Projects</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          {% for x in port1 %}
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h3>Projects 1</h3>
+              <!--<img src="img/projects/1.jpg" class="card-img-top" alt="Projects 1" />-->
+              <div class="card-body">
+                <p class="card-text">{{ x.project }}</p>
+                <p class="card-text">{{ x.keterangan }}</p>
+                <a href="https://github.com/defiliafatikasari/" target="_blank">github</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %} {% for x in port2 %}
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h3>Projects 2</h3>
+              <!--<img src="img/projects/1.jpg" class="card-img-top" alt="Projects 1" />-->
+              <div class="card-body">
+                <p class="card-text">{{ x.project }}</p>
+                <p class="card-text">{{ x.keterangan }}</p>
+                <a href="https://github.com/defiliafatikasari/" target="_blank">github</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %} {% for x in port3 %}
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h3>Projects 3</h3>
+              <!--<img src="img/projects/1.jpg" class="card-img-top" alt="Projects 1" />-->
+              <div class="card-body">
+                <p class="card-text">{{ x.project }}</p>
+                <p class="card-text">{{ x.keterangan }}</p>
+                <a href="https://batikmj.web.id/" target="_blank">batikmj.web.id</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %} {% for x in port4 %}
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h3>Projects 4</h3>
+              <!--<img src="img/projects/1.jpg" class="card-img-top" alt="Projects 1" />-->
+              <div class="card-body">
+                <p class="card-text">{{ x.project }}</p>
+                <p class="card-text">{{ x.keterangan }}</p>
+                <a href="https://github.com/defiliafatikasari/webjasa.git" target="_blank">github</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %} {% for x in port5 %}
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h3>Projects 5</h3>
+              <!--<img src="img/projects/1.jpg" class="card-img-top" alt="Projects 1" />-->
+              <div class="card-body">
+                <p class="card-text">{{ x.project }}</p>
+                <p class="card-text">{{ x.keterangan }}</p>
+                <a href="https://github.com/defiliafatikasari/" target="_blank">github</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Projects -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form action="https://formspree.io/f/mqkrzoqk" method="POST">
+              <div class="mb-3">
+                <label for="Name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="email" />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" name="message" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Kirim</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,224C672,213,768,171,864,170.7C960,171,1056,213,1152,197.3C1248,181,1344,107,1392,69.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Contact -->
+
+    <!-- Footer -->
+    <!-- body { min-height: 3000px;  }-->
+    <footer class="bg-primary text-white text-center pb-5">
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="text-white fw-bold" target="_blank">Defilia Fatikasari</a></p>
+    </footer>
+    <!-- Akhir Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

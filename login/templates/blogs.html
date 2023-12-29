@@ -1,64 +1,42 @@
 {% extends 'base.html' %} {% load static %} {% block menu %}
 <!-- Header -->
 <header class="header">
-  <a href="\login" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
+  <a href="\blogs" class="logo"><i class="fas fa-paper-plane"></i>.DF SERVICES</a>
   <nav class="navbar">
-    <a href="\home">Home</a>
     <a href="\blogs">Blogs</a>
+    <a href="#penjualan">Informasi Penjualan</a>
+    <a href="#contents">Contents</a>
+    <a href="\home">Back Home</a>
   </nav>
 
   <div class="icons">
     <div class="fas fa-bars" id="menu-btn"></div>
     <div class="fas fa-search" id="search-btn"></div>
-    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    <div class="fas fa-envelope-open" id="cart-btn"></div>
     <div class="fas fa-user" id="login-btn"></div>
   </div>
 
-  <form action="" class="search-form">
+  <form action="" class="search-form" onsubmit="performSearch(); return false;">
     <input type="search" id="search-box" placeholder="Cari....." />
-    <label for="search-box" class="fas fa-search"></label>
+    <label for="search-box" class="fas fa-search" onclick="performSearch()"></label>
   </form>
 
   <div class="shopping-cart">
     <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="{% static 'image/printer.jpg' %}" alt="" width="100px" />
+      <img src="{% static 'image/defilia.png' %}" alt="" />
       <div class="content">
-        <h3>Printer Canon ip2770</h3>
-        <span class="price">Rp</span>
-        <span class="quantity">qty : 1</span>
+        <h3>Defilia Fatikasari</h3>
       </div>
     </div>
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="{% static 'image/kertas.jpg' %}" alt="" width="100px" />
-      <div class="content">
-        <h3>Kertas F4 dan A4</h3>
-        <span class="price">Rp</span>
-        <span class="quantity">qty : 1</span>
-      </div>
-    </div>
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="{% static 'image/tinta.jpg' %}" alt="" width="100px" />
-      <div class="content">
-        <h3>Tinta</h3>
-        <span class="price">Rp</span>
-        <span class="quantity">qty : 1</span>
-      </div>
-    </div>
-    <div class="total">total : Rp</div>
-    <a href="#" class="btn">Checkout</a>
+    <div class="total">Sosial Media :</div>
+    <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">WA</a>
+    <a href="https://instagram.com/im_dftikasr18?igshid=MzMyNGUyNmU2YQ==" class="btn" target="_blank">IG</a>
+    <a href="https://youtube.com/@DefiliaFatikasariTI?si=uo36vhZJbYRNP0iP" class="btn" target="_blank">YouTube</a>
   </div>
 
-  <!-- Login -->
+  <!-- Notes -->
   <form action="" class="login-form">
-    <h3>Login Sekarang</h3>
-    <input type="email" placeholder="Masukkan E-mail" class="box" />
-    <input type="password" placeholder="Masukkan Password" class="box" />
-    <p>Lupa Password! <a href="#"> Click Here</a></p>
-    <p>Masih Belum Punya Akun! <a href="\register"> Daftar Sekarang</a></p>
-    <input type="submit" value="login now" class="btn" />
+    <a href="\portofolio" class="btn">Portofolio Defilia Fatikasari</a>
   </form>
 </header>
 <!-- End Header -->
@@ -75,103 +53,246 @@
     padding-top: 17rem;
     padding-bottom: 10rem;
   }
+
+  .search-result {
+    background-color: rgb(199, 199, 160); /* Ganti warna latar belakang sesuai kebutuhan */
+    border: 2px solid rgb(22, 9, 95); /* Ganti warna border sesuai kebutuhan */
+  }
+
+  textarea,
+  input[type='text'],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #0e0d0d;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .btns {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+  }
+
+  .btns:hover {
+    background: var(--blue);
+    color: #fff;
+  }
+
+  .p-container-pesan {
+    max-width: 12000px;
+    background-color: #eee;
+    padding: 20px;
+  }
+
+  .p-pesan {
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #7cd38f;
+    text-align: center;
+    color: #1533b6;
+    font-size: 14px;
+  }
 </style>
 
 <section class="home" id="home">
   <div class="content">
     <h3>SELAMAT DATANG <span>DI BLOGS</span> DF SERVICES</h3>
     <p>DF SERVICES - DF adalah Singkatan Nama Owner Jasa kami Defilia Fatikasari</p>
-    <p>DF Services berdiri pada tahun 2022 - Sekarang</p>
-    <a href="#" class="btn">Baca Selengkapnya Tentang DF Services</a>
+    <a href="https://jasaonoff.blogspot.com/" class="btn" target="_blank">Baca Selengkapnya</a>
   </div>
 </section>
 
-<!-- Blogs -->
-<section class="blogs" id="blogs">
-  <h1 class="heading">Blogs <span>DF Services</span></h1>
+<!-- Penjualan -->
+<section class="blogs" id="penjualan">
+  <h1 class="heading">Penjualan <span>DF Services</span></h1>
+  <h1 style="text-align: center; font-size: 30px">{{ jual }}</h1>
+
+  <div class="p-container-pesan">
+    {% for message in messages %}
+    <p class="p-pesan">{{message}}</p>
+    {% endfor %}
+  </div>
+
+  {% if sel_blogs %}
+
+  <form method="POST" action="{% url 'edit_item' sel_blogs.id %}">
+    {% csrf_token %}
+    <label> Kategori </label>
+    <select value="{{sel_blogs.home}}" name="home">
+      <option selected>-- Pilih Disini --</option>
+      {% for x in home %}
+      <option value="{{ x.id }}">{{ x.nama }}</option>
+      {% endfor %}</select
+    ><br />
+    <label> Informasi Penjualan </label>
+    <input type="text" class="form control" value="{{sel_blogs.informasi}}" name="informasi" placeholder="Masukkan Informasi Penjualan" /><br />
+    <label> Keterangan </label>
+    <textarea class="form control" name="keterangan" placeholder="Masukkan Keterangan">{{sel_blogs.keterangan}}</textarea><br />
+    <button type="submit" class="btn">Edit</button>
+  </form>
+
+  {% else %}
+  <form method="POST" action="{% url 'add_item' %}">
+    {% csrf_token %}
+    <label> Kategori </label>
+    <select name="home">
+      <option selected>-- Pilih Disini --</option>
+      {% for x in home %}
+      <option value="{{ x.id }}">{{ x.nama }}</option>
+      {% endfor %}</select
+    ><br />
+    <label> Informasi Penjualan </label>
+    <input type="text" class="form control" name="informasi" placeholder="Masukkan Informasi Penjualan" /><br />
+    <label> Keterangan </label>
+    <textarea class="form control" name="keterangan" placeholder="Masukkan Keterangan"></textarea><br />
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  {% endif %}
+  <br />
+  <table style="border: 1px solid; font-size: 12px">
+    <tr>
+      <th style="border: 1px solid">Informasi Penjualan</th>
+      <th style="border: 1px solid">Keterangan</th>
+      <th style="border: 1px solid" colspan="3">Aksi</th>
+    </tr>
+    {% for x in blogs %}
+    <tr>
+      <td style="border: 1px solid; padding: 5px"><b>{{ x.informasi }}</b></td>
+      <td style="border: 1px solid; padding: 5px"><b>{{ x.keterangan }}</b></td>
+      <th><a href="/blogs/{{ x.id }}" class="btns">DETAIL</a></th>
+      <th><a href="{% url 'update_item' x.id %}" class="btns">EDIT</a></th>
+      <th><a href="{% url 'delete_item' x.id %}" class="btns">DELETE</a></th>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+<!-- End Penjualan -->
+
+<!-- Contents -->
+<section class="blogs" id="contents">
+  <h1 class="heading">Contents <span>DF Services</span></h1>
 
   <div class="box-container">
     <div class="box">
       <img src="{% static 'image/logodf.png' %}" alt="" />
       <div class="content">
         <div class="icons">
-          <a href="#"><i class="fas fa-user"></i> by Pengguna </a>
-          <a href="#"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
+          <a href="#defilia"><i class="fas fa-user"></i> by Pengguna </a>
+          <a href="#tanggal"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
         </div>
         <h3>DF Services</h3>
-        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain</p>
-        <a href="#" class="btn">Baca Selengkapnya</a>
+        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain...</p>
+        <a href="https://jasaonoff.blogspot.com/2023/11/df-services-menyediakan-berbagai-jasa.html" class="btn" target="_blank">Baca Selengkapnya</a>
       </div>
     </div>
 
     <div class="box">
-      <img src="{% static 'image/logodf.png' %}" alt="" />
+      <img src="{% static 'image/offline.jpg' %}" alt="" />
       <div class="content">
         <div class="icons">
-          <a href="#"><i class="fas fa-user"></i> by Pengguna </a>
-          <a href="#"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
+          <a href="#defilia"><i class="fas fa-user"></i> by Pengguna </a>
+          <a href="#tanggal"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
         </div>
-        <h3>DF Services</h3>
-        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain</p>
-        <a href="#" class="btn">Baca Selengkapnya</a>
+        <h3>Testimoni Customer</h3>
+        <p>Beberapa Testimoni Dari Para Customer...</p>
+        <a href="https://jasaonoff.blogspot.com/2023/11/testimoni-customer.html" class="btn" target="_blank">Baca Selengkapnya</a>
       </div>
     </div>
 
     <div class="box">
-      <img src="{% static 'image/logodf.png' %}" alt="" />
+      <img src="{% static 'image/online.jpg' %}" alt="" />
       <div class="content">
         <div class="icons">
-          <a href="#"><i class="fas fa-user"></i> by Pengguna </a>
-          <a href="#"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
+          <a href="#defilia"><i class="fas fa-user"></i> by Pengguna </a>
+          <a href="#tanggal"><i class="fas fa-calendar"></i> 1st nov, 2023 </a>
         </div>
-        <h3>DF Services</h3>
-        <p>DF Services bertujuan untuk meringankan beban para siswa ataupun mahasiswa serta semua orang yang susah & dan imager. Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain</p>
-        <a href="#" class="btn">Baca Selengkapnya</a>
+        <h3>Teknologi Informatika - IT</h3>
+        <p>IT (Information Technology) adalah bidang yang berkaitan dengan penggunaan komputer dan perangkat lainnya untuk mengelola dan menyampaikan informasi...</p>
+        <a href="https://jasaonoff.blogspot.com/2023/11/teknologi-informatika-it.html" class="btn" target="_blank">Baca Selengkapnya</a>
       </div>
     </div>
   </div>
 </section>
-<!-- End Blogs -->
+<!-- End Contents -->
+
+<script>
+  function performSearch() {
+    var searchTerm = document.getElementById('search-box').value.trim().toLowerCase();
+
+    if (searchTerm !== '') {
+      // Pilih hanya elemen-elemen di dalam bagian "Penjualan"
+      var penjualanSection = document.getElementById('penjualan');
+      var searchElements = penjualanSection.getElementsByTagName('*');
+
+      // Hapus kelas 'search-result' dari semua elemen
+      for (var i = 0; i < searchElements.length; i++) {
+        searchElements[i].classList.remove('search-result');
+      }
+
+      // Loop melalui elemen-elemen di dalam bagian "Penjualan"
+      for (var i = 0; i < searchElements.length; i++) {
+        var elementContent = searchElements[i].textContent.toLowerCase();
+
+        // Periksa apakah istilah pencarian ditemukan di konten elemen
+        if (elementContent.includes(searchTerm)) {
+          // Tambahkan kelas 'search-result' ke elemen yang cocok
+          searchElements[i].classList.add('search-result');
+
+          // Langsung fokus ke elemen yang cocok
+          searchElements[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+  }
+</script>
 
 <!-- Footer -->
 <section class="footer">
   <div class="box-container">
     <div class="box">
-      <h3>DF Services <i class="fas fa-shopping-basket"></i></h3>
-      <p>DF Services - Membantu Pekerjaan Anda</p>
+      <h3>DF Services <i class="fas fa-paper-plane"></i></h3>
       <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
+        <a href="https://www.facebook.com/defilia.fatikasari.77?mibextid=ZbWKwL" class="fab fa-facebook-f" target="_blank"></a>
+        <a href="https://twitter.com/kookiyy3?t=Qd8vS0fOXOA8AJTiQf7E_Q&s=09" class="fab fa-twitter" target="_blank"></a>
+        <a href="https://instagram.com/im_dftikasr18?igshid=MzMyNGUyNmU2YQ==" class="fab fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/defilia-fatikasari-760b3026b/" class="fab fa-linkedin" target="_blank"></a>
       </div>
     </div>
 
     <div class="box">
       <h3>Info Kontak</h3>
-      <a href="#" class="links"><i class="fas fa-phone"></i>+6282-19756-9330</a>
-      <a href="#" class="links"><i class="fas fa-phone"></i>+6287-81789-9367</a>
-      <a href="#" class="links"><i class="fas fa-envelope"></i>defiliafatikasari09@gmail.com</a>
-      <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>Indonesia, Jawa Timur</a>
+      <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="links" target="_blank"><i class="fas fa-phone"></i>+6282-19756-9330</a>
+      <a href="#NoTlp" class="links"><i class="fas fa-phone"></i>+6287-81789-9367</a>
+      <a href="https://mail.google.com/" class="links" target="_blank"><i class="fas fa-envelope"></i>defiliafatikasari09@gmail.com</a>
+      <a href="https://maps.app.goo.gl/uKF7Houxsdoc1AK97" class="links" target="_blank"><i class="fas fa-map-marker-alt"></i>Indonesia, Jawa Timur</a>
     </div>
 
     <div class="box">
       <h3>quick links</h3>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Tentang Kami</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Jasa Yang Tersedia</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Kontak</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Review</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
+      <a href="\blogs" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
+      <a href="#contents" class="links"><i class="fas fa-arrow-right"></i>Contents</a>
+      <a href="#penjualan" class="links"><i class="fas fa-arrow-right"></i>Informasi Penjualan</a>
+      <a href="\home" class="links"><i class="fas fa-arrow-right"></i>Back Home</a>
+      <a href="\portofolio" class="links"><i class="fas fa-arrow-right"></i>Portofolio</a>
     </div>
 
     <div class="box">
-      <h3>newsletter</h3>
-      <p>subscribe for latest updates</p>
-      <input type="email" placeholder="email kamu" class="email" />
-      <input type="submit" value="subscribe" class="btn" /><br />
-      <img src="{% static 'image/cash.jpg' %}" class="payment-img" alt="" width="100px" />
-      <img src="{% static 'image/bank.jpg' %}" class="payment-img" alt="" width="100px" />
+      <h3>Defilia Fatikasari</h3>
+      <img src="{% static 'image/foto.jpg' %}" class="payment-img" alt="" />
     </div>
   </div>
   <div class="credit">Created by <span>Defilia Fatikasari 2023 </span> | all rights reserved</div>

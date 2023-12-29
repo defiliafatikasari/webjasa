@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block menu %}
 <!-- Header -->
 <header class="header">
-  <a href="\login" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
+  <a href="\" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
   <nav class="navbar">
     <a href="\home">Home</a>
     <a href="#about">Tentang Kami</a>
@@ -13,56 +13,38 @@
 
   <div class="icons">
     <div class="fas fa-bars" id="menu-btn"></div>
-    <div class="fas fa-search" id="search-btn"></div>
+    <div class="fas fa-calendar-alt" id="search-btn"></div>
     <div class="fas fa-shopping-cart" id="cart-btn"></div>
-    <div class="fas fa-user" id="login-btn"></div>
+    <div class="fas fa-bell" id="login-btn"></div>
   </div>
 
   <form action="" class="search-form">
-    <input type="search" id="search-box" placeholder="Cari....." />
-    <label for="search-box" class="fas fa-search"></label>
+    <h1>DF Services berdiri pada tahun 2022 - Sekarang</h1>
   </form>
 
   <div class="shopping-cart">
     <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="{% static 'image/jmakalah.png' %}" alt="" width="100px" />
+      <img src="{% static 'image/logodf.png' %}" alt="" />
       <div class="content">
-        <h3>Jasa Pembuatan Makalah</h3>
-        <span class="price">DP-Rp15000</span>
-        <span class="quantity">qty : 1 </span>
+        <h3>Cara Pemesanan</h3>
       </div>
     </div>
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="{% static 'image/jketik.png' %}" alt="" width="100px" />
-      <div class="content">
-        <h3>Jasa Ketik</h3>
-        <span class="price">DP-Rp10000</span>
-        <span class="quantity">qty : 1</span>
-      </div>
-    </div>
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="{% static 'image/jprinthp.png' %}" alt="" width="100px" />
-      <div class="content">
-        <h3>Jasa Print Hitam Putih</h3>
-        <span class="price">Rp20000</span>
-        <span class="quantity">qty : 10 Lembar</span>
-      </div>
-    </div>
-    <div class="total">total : Rp45000</div>
-    <a href="#" class="btn">Checkout</a>
+    <div class="total">Untuk Melakukan Pemesanan Jasa Kami Langsung Hubungi atau Kunjungi :</div>
+    <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">WA</a>
+    <a href="https://instagram.com/dfser.vices?igshid=MTh2djF6eTNrdTUyZg==" class="btn" target="_blank">IG</a>
+    <a href="https://shopee.co.id/dfservices" class="btn" target="_blank">Shopee</a>
   </div>
 
-  <!-- Login -->
+  <!-- Notes -->
   <form action="" class="login-form">
-    <h3>Login Sekarang</h3>
-    <input type="email" placeholder="Masukkan E-mail" class="box" />
-    <input type="password" placeholder="Masukkan Password" class="box" />
-    <p>Lupa Password! <a href="#"> Click Here</a></p>
-    <p>Masih Belum Punya Akun! <a href="\register"> Daftar Sekarang</a></p>
-    <input type="submit" value="login now" class="btn" />
+    <h3>Notes :</h3>
+    <p>Jika Berminat Untuk Menjadi Salah Satu Member atau Pekerja Freelance dari Jasa DF Services Bisa Langsung Menghubungi E-mail : defiliafatikasari09@gmail.com</p>
+    <h3>Persyaratan :</h3>
+    <p>1. Minimal Lulus SMA/SMK/MA;</p>
+    <p>2. CV-Curriculum Vitae dalam bentuk PDF;</p>
+    <p>3. Scan KTP dalam bentuk JPG/PNG/PDF;</p>
+    <p>4. Scan Ijasah Terakhir dalam bentuk JPG/PNG/PDF;</p>
+    <p>5. Semua File Tersebut Di Kirim Ke Alamat E-mail di atas.</p>
   </form>
 </header>
 <!-- End Header -->
@@ -97,25 +79,31 @@
 
   <div class="box-container">
     <div class="box">
-      <img src="{% static 'image/logodf.png' %}" alt="" width="100px" />
+      <img src="{% static 'image/logodf.png' %}" alt="" />
+      <img src="{% static 'image/offline.jpg' %}" alt="" />
+      <img src="{% static 'image/online.jpg' %}" alt="" />
       <h3>DF-SERVICES</h3>
-      <p>Kami Siap Melayani Jasa Print, Ketik, Pembuatan Makalah/PPT SD,SMP,SMA/Mahasiswa dan Editing/Desain....</p>
-      <a href="#" class="btn">Baca Selengkapnya</a>
+      <p>DF Services Bertujuan Untuk Meringankan Beban Para Siswa Ataupun Mahasiswa Serta Semua Orang Yang Susah & Dan Imager. Kami Siap Melayani Jasa....</p>
+      <a href="https://jasaonoff.blogspot.com/2023/11/df-services-menyediakan-berbagai-jasa.html" class="btn" target="_blank">Baca Selengkapnya</a>
     </div>
 
     <div class="box">
-      <img src="{% static 'image/printer.jpg' %}" alt="" width="100px" />
-      <h3>Printer Canon ip2770</h3>
-      <p>Menggunakan Jenis Printer Canon ip2770, dengan Kualitas Pencetakan yang terbaik dan bagus...</p>
-      <a href="#" class="btn">Baca Selengkapnya</a>
+      <img src="{% static 'image/defilia.png' %}" alt="" />
+      <img src="{% static 'image/fatika.png' %}" alt="" />
+      <img src="{% static 'image/tika.png' %}" alt="" />
+      <img src="{% static 'image/sari.png' %}" alt="" />
+      <h3>Owner DF Services</h3>
+      <p>DF Services didirikan pada tahun 2022 sampai Sekarang oleh Defilia Fatikasari.....</p>
+      <a href="https://jasaonoff.blogspot.com/2023/11/owner-df-services.html" class="btn" target="_blank">Baca Selengkapnya</a>
     </div>
 
     <div class="box">
-      <img src="{% static 'image/kertas.jpg' %}" alt="" width="100px" />
-      <img src="{% static 'image/tinta.jpg' %}" alt="" width="100px" />
-      <h3>Kertas F4/A4 Dan Tinta</h3>
-      <p>Menggunakan Kertas dengan Ukuran F4(Folio) dan A4 70gsm, serta Menggunakan Merek Tinta terbagus...</p>
-      <a href="#" class="btn">Baca Selengkapnya</a>
+      <img src="{% static 'image/printer.jpg' %}" alt="" />
+      <img src="{% static 'image/kertas.jpg' %}" alt="" />
+      <img src="{% static 'image/tinta.jpg' %}" alt="" />
+      <h3>Printer, Kertas Dan Tinta</h3>
+      <p>Menggunakan Jenis Printer Canon ip2770, Kertas dengan Ukuran F4(Folio) dan A4 70gsm, serta Menggunakan Merek Tinta.....</p>
+      <a href="https://jasaonoff.blogspot.com/2023/11/printer-kertas-dan-tinta.html" class="btn" target="_blank">Baca Selengkapnya</a>
     </div>
   </div>
 </section>
@@ -124,6 +112,23 @@
 <!-- Jasa yang Tersedia -->
 <section class="jasa" id="jasa">
   <h1 class="heading">Jasa - <span>DF Services</span></h1>
+  <h1 style="text-align: center; font-size: 30px">{{ jasa }}</h1>
+  <br />
+  <table style="border: 1px solid">
+    <tr>
+      <th style="border: 1px solid">Jasa</th>
+      <th style="border: 1px solid">Keterangan</th>
+      <th style="border: 1px solid">Harga</th>
+    </tr>
+    {% for x in home %}
+    <tr>
+      <td style="border: 1px solid; padding: 5px"><b>{{ x.nama }}</b></td>
+      <td style="border: 1px solid; padding: 5px"><b>{{ x.keterangan }}</b></td>
+      <td style="border: 1px solid; padding: 5px"><b>{{ x.harga }}</b></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br />
 
   <div class="swiper product-kami">
     <div class="swiper-wrapper">
@@ -138,7 +143,8 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
+        <a href="https://shp.ee/kidefsj" class="btn" target="_blank">Shopee</a>
       </div>
 
       <div class="swiper-slide box">
@@ -152,7 +158,8 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
+        <a href="https://shp.ee/kidefsj" class="btn" target="_blank">Shopee</a>
       </div>
 
       <div class="swiper-slide box">
@@ -166,7 +173,8 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
+        <a href="https://shp.ee/kidefsj" class="btn" target="_blank">Shopee</a>
       </div>
 
       <div class="swiper-slide box">
@@ -180,7 +188,8 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
+        <a href="https://shp.ee/kidefsj" class="btn" target="_blank">Shopee</a>
       </div>
     </div>
   </div>
@@ -190,7 +199,7 @@
       <div class="swiper-slide box">
         <img src="{% static 'image/jketik.png' %}" alt="" />
         <h3>Jasa Ketik</h3>
-        <div class="harga">Start from : Rp3000</div>
+        <div class="harga">Start from : Rp5000</div>
         <div class="starts">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -198,12 +207,26 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
       </div>
 
       <div class="swiper-slide box">
         <img src="{% static 'image/jmakalah.png' %}" alt="" />
         <h3>Jasa Pembuatan Makalah SD/SMP/SMA/Mahasiswa</h3>
+        <div class="harga">Start from : Rp20000</div>
+        <div class="starts">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-alt"></i>
+        </div>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
+      </div>
+
+      <div class="swiper-slide box">
+        <img src="{% static 'image/jppt.png' %}" alt="" />
+        <h3>Jasa Pembuatan PPT SD/SMP/SMA/Mahasiswa</h3>
         <div class="harga">Start from : Rp25000</div>
         <div class="starts">
           <i class="fa fa-star"></i>
@@ -212,21 +235,7 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
-      </div>
-
-      <div class="swiper-slide box">
-        <img src="{% static 'image/jppt.png' %}" alt="" />
-        <h3>Jasa Pembuatan PPT SD/SMP/SMA/Mahasiswa</h3>
-        <div class="harga">Start from : Rp30000</div>
-        <div class="starts">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star-half-alt"></i>
-        </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
       </div>
 
       <div class="swiper-slide box">
@@ -240,7 +249,7 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star-half-alt"></i>
         </div>
-        <a href="#" class="btn">Tambahkan Ke Keranjang</a>
+        <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Order</a>
       </div>
     </div>
   </div>
@@ -255,42 +264,49 @@
       <img src="{% static 'image/logowa.png' %}" alt="" />
       <h3>082197569330</h3>
       <p>Hubungi Kontak WA di atas</p>
-      <a href="#" class="btn">Klik Link Ini</a>
+      <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="btn" target="_blank">Klik Link Ini</a>
     </div>
 
     <div class="box">
       <img src="{% static 'image/logoemail.png' %}" alt="" />
-      <h3>defitikalisajk@gmail.com</h3>
+      <h3>defitika@gmail.com</h3>
       <p>Pengiriman File</p>
-      <a href="#" class="btn">Klik Link Ini</a>
+      <a href="https://mail.google.com/" class="btn" target="_blank">Klik Link Ini</a>
     </div>
 
     <div class="box">
       <img src="{% static 'image/logoig.png' %}" alt="" />
-      <h3>@dfser.vices/@im_dftikasr</h3>
+      <h3>@dfser.vices</h3>
       <p>Informasi Lengkap</p>
-      <a href="#" class="btn">Klik Link Ini</a>
+      <a href="https://instagram.com/dfser.vices?igshid=MTh2djF6eTNrdTUyZg==" class="btn" target="_blank">Klik Link Ini</a>
     </div>
 
     <div class="box">
       <img src="{% static 'image/logofb.png' %}" alt="" />
       <h3>Defilia Fatikasari</h3>
       <p>Kontak Facebook</p>
-      <a href="#" class="btn">Klik Link Ini</a>
+      <a href="https://www.facebook.com/defilia.fatikasari.77?mibextid=ZbWKwL" class="btn" target="_blank">Klik Link Ini</a>
     </div>
 
     <div class="box">
       <img src="{% static 'image/logoyt.png' %}" alt="" />
       <h3>Defilia Fatikasari</h3>
       <p>YouTube</p>
-      <a href="#" class="btn">Klik Link Ini</a>
+      <a href="https://youtube.com/@DefiliaFatikasariTI?si=uo36vhZJbYRNP0iP" class="btn" target="_blank">Klik Link Ini</a>
+    </div>
+
+    <div class="box">
+      <img src="{% static 'image/shoope.png' %}" alt="" />
+      <h3>dfservices</h3>
+      <p>Toko Online DF Services - Shoope</p>
+      <a href="https://shopee.co.id/dfservices" class="btn" target="_blank">Klik Link Ini</a>
     </div>
 
     <div class="box">
       <img src="{% static 'image/logolokasi.png' %}" alt="" />
-      <h3>Lokasi Jasa DF Services</h3>
-      <p>Jalan Jalmak Tengah, RT.002/RW.005, Gang 7 Pamekasan, Jawa Timur</p>
-      <a href="#" class="btn">Klik Link Ini</a>
+      <h3>Lokasi DF Services</h3>
+      <p>Jalan Jalmak Gang.7, Jawa Timur</p>
+      <a href="https://maps.app.goo.gl/uKF7Houxsdoc1AK97" class="btn" target="_blank">Klik Link Ini</a>
     </div>
   </div>
 </section>
@@ -344,7 +360,7 @@
       <div class="swiper-slide box">
         <img src="{% static 'image/logodf.png' %}" alt="" />
         <p>Jasa buat makalah yang super duper keren dan bagus</p>
-        <h3>Yoga Septian DP</h3>
+        <h3>Muhammad Dayat</h3>
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -365,38 +381,35 @@
       <h3>DF Services <i class="fas fa-shopping-basket"></i></h3>
       <p>DF Services - Membantu Pekerjaan Anda</p>
       <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
+        <a href="https://www.facebook.com/defilia.fatikasari.77?mibextid=ZbWKwL" class="fab fa-facebook-f" target="_blank"></a>
+        <a href="https://instagram.com/im_dftikasr18?igshid=MzMyNGUyNmU2YQ==" class="fab fa-instagram" target="_blank"></a>
       </div>
     </div>
 
     <div class="box">
       <h3>Info Kontak</h3>
-      <a href="#" class="links"><i class="fas fa-phone"></i>+6282-19756-9330</a>
-      <a href="#" class="links"><i class="fas fa-phone"></i>+6287-81789-9367</a>
-      <a href="#" class="links"><i class="fas fa-envelope"></i>defiliafatikasari09@gmail.com</a>
-      <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>Indonesia, Jawa Timur</a>
+      <a href="https://wa.me/qr/HSY7TPXLG2ADL1" class="links" target="_blank"><i class="fas fa-phone"></i>+6282-19756-9330</a>
+      <a href="#NoTlp" class="links"><i class="fas fa-phone"></i>+6287-81789-9367</a>
+      <a href="https://mail.google.com/" class="links" target="_blank"><i class="fas fa-envelope"></i>defiliafatikasari09@gmail.com</a>
+      <a href="https://maps.app.goo.gl/uKF7Houxsdoc1AK97" class="links" target="_blank"><i class="fas fa-map-marker-alt"></i>Indonesia, Jawa Timur</a>
     </div>
 
     <div class="box">
       <h3>quick links</h3>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Tentang Kami</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Jasa Yang Tersedia</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Kontak</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Review</a>
-      <a href="#" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
+      <a href="\home" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+      <a href="#about" class="links"><i class="fas fa-arrow-right"></i>Tentang Kami</a>
+      <a href="#jasa" class="links"><i class="fas fa-arrow-right"></i>Jasa Yang Tersedia</a>
+      <a href="#kontak" class="links"><i class="fas fa-arrow-right"></i>Kontak</a>
+      <a href="#review" class="links"><i class="fas fa-arrow-right"></i>Review</a>
+      <a href="\blogs" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
     </div>
 
     <div class="box">
-      <h3>newsletter</h3>
-      <p>subscribe for latest updates</p>
-      <input type="email" placeholder="email kamu" class="email" />
-      <input type="submit" value="subscribe" class="btn" /><br />
-      <img src="{% static 'image/cash.jpg' %}" class="payment-img" alt="" width="100px" />
-      <img src="{% static 'image/bank.jpg' %}" class="payment-img" alt="" width="100px" />
+      <h3>Metode Pembayaran</h3>
+      <img src="{% static 'image/cash.jpg' %}" class="payment-img" alt="" />
+      <img src="{% static 'image/bank.jpg' %}" class="payment-img" alt="" />
+      <img src="{% static 'image/mandiri.svg.webp' %}" class="payment-img" alt="" />
+      <img src="{% static 'image/pay.png' %}" class="payment-img" alt="" />
     </div>
   </div>
   <div class="credit">Created by <span>Defilia Fatikasari 2023 </span> | all rights reserved</div>

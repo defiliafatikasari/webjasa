@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% load static %} {% block menu %}
+<!-- Header -->
+<header class="header">
+  <a href="\" class="logo"><i class="fas fa-shopping-basket"></i>.DF SERVICES</a>
+  <nav class="navbar">
+    <a href="{% url 'blogs' %}#penjualan">BackBlogs</a>
+  </nav>
+</header>
+<br /><br /><br /><br />
+<!-- End Header -->
+{% endblock menu %} {% block content %}
+
+<!-- Blogs -->
+<section class="blogs" id="blogs">
+  <h1 class="heading">DETAIL <span>Penjualan DF Services</span></h1>
+  <h3 style="text-align: center; font-size: 14px">Kode : JP-Jasa Print, JK-Jasa Ketik, JM-Jasa Buat Makalah, JPP-Jasa Buat PPT, JDE-Jasa Desain/Editing</h3>
+  <br />
+  <table style="border: 1px solid; font-size: 20px; margin: auto">
+    <tr>
+      <th style="border: 1px solid">Informasi</th>
+      <th style="border: 1px solid">Keterangan</th>
+      <th style="border: 1px solid">Kategori</th>
+    </tr>
+
+    <tr>
+      <td style="border: 1px solid; padding: 5px"><b>{{ blogs.informasi }}</b></td>
+      <td style="border: 1px solid; padding: 5px"><b>{{ blogs.keterangan }}</b></td>
+      <td style="border: 1px solid; padding: 5px"><b>{{ blogs.home }}</b></td>
+    </tr>
+  </table>
+  <br />
+</section>
+<!-- End Blogs -->
+{% endblock content %}
